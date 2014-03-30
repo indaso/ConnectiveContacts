@@ -10,3 +10,19 @@
  *
  *= require_self
  */
+
+a {
+	text-decoration: none;
+}
+
+.specborder {
+	border-style: solid;
+	border-width: thin;
+	border-color: #ddd;
+	border-radius: 5px;
+	padding-bottom: 10px;
+}
+
+.tos {
+	height: 300px;
+}
