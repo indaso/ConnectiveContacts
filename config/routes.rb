@@ -1,4 +1,8 @@
 ConnectiveContacts::Application.routes.draw do
+  get "terms", to: 'static#terms', as: 'terms'
+  get "privacy", to: 'static#privacy', as: 'privacy'
+  get "about", to: 'static#about', as: 'about'
+  get "contact", to: 'static#contact', as: 'contact'
   devise_for :users
   get "home/index"
   # The priority is based upon order of creation: first created -> highest priority.

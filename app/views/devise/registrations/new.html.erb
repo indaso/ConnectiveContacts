@@ -28,14 +28,13 @@
 	</div>
 
 	<div class="form-group">
-		<%= f.label 'Accept Terms of Service?' %>
-		<%= check_box_tag('tos', value = '1', checked = false, options = {}) %>
+		<%= f.label 'Accept Terms of Service?', :class => 'inline' %>
+		<%= f.check_box :terms_of_service %>
 	</div>
 
 	<div class="form-group">
 		<%= f.submit "Sign up", :class => "btn btn-primary btn-sm" %>
 	</div>
-
 
 	<% end %>
 
