@@ -1,42 +1,115 @@
+
+
 <div class="container specborder">
-	<h2>Sign up</h2>
 
-	<%= form_for(resource, :as => resource_name, :url => registration_path(resource_name)) do |f| %>
 
-	<div class="tos specborder">
-		<p>Terms of Service</p>
-	</div>
+	<%= simple_form_for(resource, :as => resource_name, :url => registration_path(resource_name)) do |f| %>
+
+
 
 	<%= devise_error_messages! %>
 
-	<div class="form-group"><br /><%= f.label :name %>
-		<%= f.text_field :name, :class => 'form-control' %>
-	</div>
 
-	<div class="form-group">
-		<%= f.label :email %>
-		<br />
-		<%= f.email_field :email, :autofocus => true, :class => 'form-control' %>
-	</div>
 
-	<div class="form-group"><%= f.label :password %><br />
-		<%= f.password_field :password, :class => 'form-control' %>
+
+
+<!-- 	<div class="form-group"><%= f.label :password %><br />
+		<%= f.password_field :password %>
 	</div>
 
 	<div class="form-group"><%= f.label :password_confirmation %><br />
-		<%= f.password_field :password_confirmation, :class => 'form-control' %>
+		<%= f.password_field :password_confirmation %>
+	</div> -->
+	<br />
+	<div class="section-1">
+		<h4>Listing Profile Information</h4>
+
+		<%= f.input :company_name %>
+		<%= f.input :street %>
+		<%= f.input :street2, label: 'Street' %>
+		<%= f.input :city %>		
+
+		<%= f.input :state %>		
+
+		<%= f.input :zip_code %>		
+
+		<%= f.input :company_phone %>			
+		
+		<%= f.input :company_email %>			
+		
+		<%= f.input :company_website, as: :url %>			
+		
+		<%= f.input :reservation_provider %>		
+			
+		<%= f.input :your_provider_ref %>			
+	
+		<%= f.input :single_platform%>	
+
+		<%= f.input :locu %>		
+	
+		<%= f.input :facebook %>		
+
+		<%= f.input :twitter %>			
+
+		<%= f.input :instagram %>	
+
+
 	</div>
 
-	<div class="form-group">
-		<%= f.label 'Accept Terms of Service?', :class => 'inline' %>
-		<%= f.check_box :terms_of_service %>
+	<div class="section-2">
+		<h4>Hours of Operation</h4>
+		<%= f.input :monday %>
+		<%= f.input :tuesday %>
+		<%= f.input :wednesday %>		
+		<%= f.input :thursday %>			
+		<%= f.input :friday %>			
+		<%= f.input :saturday %>			
+		<%= f.input :sunday %>			
 	</div>
 
-	<div class="form-group">
+	<div class="section-3">
+		<h4>Billing Information</h4>
+		<%= f.input :billing_address, inline_label: 'Credit Card billing address the same as business address' %>
+		<%= f.input :first_name %>
+		<%= f.input :last_name %>
+		<%= f.input :billing_street %>
+		<%= f.input :billing_street2, label: 'Billing street' %>
+		<%= f.input :billing_city %>
+		<%= f.input :billing_state %>
+		<%= f.input :billing_zip_code %>
+		<%= f.input :billing_phone_number %>	
+		<%= f.input :email %>		
+
+	</div>
+
+	<div class="section-4">
+		<h4>Credit Card Information</h4>
+		<%= f.input :credit_card %>
+		<%= f.input :card_number %>
+		<%= f.input :expiration_date %>
+		<%= f.input :security_code %>
+	</div>
+
+	<div class="section-5">
+		<div class="tos">
+			<p style="display:block">I CERTIFY THAT THE ABOVE STATEMENTS AND INFORMATION MADE IN THE AGREEMENT ARE TRUE AND CORRECT TO THE BEST OF MY KNOWLEDGE. I FURTHER AGREE TO CONNECTIVE CONTACTS TERMS AND CONDITIONS. <br /> <br />
+				I ALSO CERTIFY THAT I AM AUTHORIZED TO EFFECT CHARGES TO THE ABOVE CREDIT CARD NUMBER. IN THE CASE OF ANY ISSUES OR DISPUTES CONCERNING THIS TRANSACTION I WILL NOTIFY CONNECTIVE CONTACTS, INC. PROMPTLY TO RECTIFY THE SITUATION PRIOR TO NOTIFYING MY CREDIT CARD COMPANY.<br /><br />
+				I authorize Connective Contacts, Inc. to charge this credit card above for services or products provided by Connective Contacts, Inc. I also agree to be charged every month until I give written notice to Connective Contacts, Inc. to stop.
+			</p>
+		</div>
+		<br />
+
+		<%= f.input :terms_of_service, label: 'Terms and Conditions', inline_label: 'I agree to Connective Contacts Terms and Conditions' %> 
+
+
 		<%= f.submit "Sign up", :class => "btn btn-primary btn-sm" %>
 	</div>
-
 	<% end %>
+
+	<br />
+	<button class="btn btn-primary btn-sm previous">Previous</button>
+	<button class="btn btn-primary btn-sm next">Next</button>	
+	<br />
 
 	<%= render "devise/shared/links" %>
 </div>

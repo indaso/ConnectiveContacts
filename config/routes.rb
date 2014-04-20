@@ -1,4 +1,6 @@
 ConnectiveContacts::Application.routes.draw do
+  get "users/show"
+  get "users/index"
   get "terms", to: 'static#terms', as: 'terms'
   get "privacy", to: 'static#privacy', as: 'privacy'
   get "about", to: 'static#about', as: 'about'
@@ -10,6 +12,7 @@ ConnectiveContacts::Application.routes.draw do
 
   # You can have the root of your site routed with "root"
   root 'home#index'
+  resources :users
 
   # Example of regular route:
   #   get 'products/:id' => 'catalog#view'

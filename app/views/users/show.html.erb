@@ -1,0 +1,23 @@
+<div class="container">
+	<h1>User Profile</h1>
+
+	<div class="table-responsive">
+		<table class="table table-condensed">
+			<tr><td><label>Company Name:</td> <td><%=@user.company_name%></td></tr>
+			<tr><td><label>Street:</label></td> <td><%=@user.street%></td></tr>
+			<tr><td><label>Street:</label></td> <td><%=@user.street2%></td></tr>
+			<tr><td><label>City:</label></td> <td><%=@user.city%></td></tr>
+			<tr><td><label>State:</label></td> <td><%=@user.state%></td></tr>
+			<tr><td><label>Zip Code:</label></td> <td><%=@user.street%></td></tr>
+			<tr><td><label>Company Phone:</label></td> <td><%=@user.company_phone%></td></tr>
+			<tr><td><label>Company Email:</label></td> <td><%=@user.company_email%></td></tr>
+			<tr><td><label>Company Website:</label></td> <td><%=@user.company_website%></td></tr>
+			<tr><td><label>Reservation Provider:</label></td> <td><%=@user.reservation_provider%></td></tr>
+			<tr><td><label>Your Provider Ref:</label></td> <td><%=@user.your_provider_ref%></td></tr>
+			<tr><td><label>Other Information:</label></td> <td>Single Platform: <%=check_box("Single Platform", :single_platform, {}, 1, 0)%> Locu: <%=check_box("Locu", :locu, {}, 1, 0)%> </td></tr>
+			<tr><td><label>Facebook:</label></td> <td><%=@user.facebook%></td></tr>
+			<tr><td><label>Twitter:</label></td> <td><%=@user.twitter%></td></tr>
+			<tr><td><label>Instagram:</label></td> <td><%=@user.instagram%></td></tr>
+		</table>
+	</div>
+</div>
