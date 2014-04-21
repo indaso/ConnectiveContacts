@@ -55,5 +55,5 @@ gem 'kaminari', '~> 0.15.1'
 
 gem 'simple_form'
 
-
+gem 'hirb'
 
