@@ -100,7 +100,9 @@
 		<br />
 
 		<%= f.input :terms_of_service, label: 'Terms and Conditions', inline_label: 'I agree to Connective Contacts Terms and Conditions' %> 
-
+		<%= f.input :signatory_name %>
+		<%= f.input :initial_acceptance %>
+		<%= f.input :date %>
 
 		<%= f.submit "Sign up", :class => "btn btn-primary btn-sm" %>
 	</div>

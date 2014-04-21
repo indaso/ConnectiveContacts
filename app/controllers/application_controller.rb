@@ -44,7 +44,9 @@ class ApplicationController < ActionController::Base
   	devise_parameter_sanitizer.for(:sign_up) << :expiration_date
   	devise_parameter_sanitizer.for(:sign_up) << :security_code
     devise_parameter_sanitizer.for(:sign_up) << :terms_of_service
-
+    devise_parameter_sanitizer.for(:sign_up) << :signatory_name
+    devise_parameter_sanitizer.for(:sign_up) << :initial_acceptance
+    devise_parameter_sanitizer.for(:sign_up) << :date
 
   end
 end
