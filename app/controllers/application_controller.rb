@@ -39,7 +39,6 @@ class ApplicationController < ActionController::Base
   	devise_parameter_sanitizer.for(:sign_up) << :billing_state
   	devise_parameter_sanitizer.for(:sign_up) << :billing_zip_code
   	devise_parameter_sanitizer.for(:sign_up) << :billing_phone_number
-  	devise_parameter_sanitizer.for(:sign_up) << :email
   	devise_parameter_sanitizer.for(:sign_up) << :credit_card
   	devise_parameter_sanitizer.for(:sign_up) << :card_number
   	devise_parameter_sanitizer.for(:sign_up) << :expiration_date
