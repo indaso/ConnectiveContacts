@@ -1,6 +1,6 @@
 class AddBillingToUsers < ActiveRecord::Migration
   def change
-    add_column :users, :billing_address, :string
+    add_column :users, :billing_address, :boolean
     add_column :users, :first_name, :string
     add_column :users, :last_name, :string
     add_column :users, :billing_street, :string

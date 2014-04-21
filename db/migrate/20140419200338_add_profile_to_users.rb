@@ -1,5 +1,6 @@
 class AddProfileToUsers < ActiveRecord::Migration
   def change
+    add_column :users, :company_name, :string
     add_column :users, :street, :string
     add_column :users, :street2, :string
     add_column :users, :city, :string
